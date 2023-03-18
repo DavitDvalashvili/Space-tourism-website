@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300&family=Red+Hat+Text:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+//colors
+$dark:   #0B0D17;
+$light: #D0D6F9;
+$white: #ffffff;
+$bc-color: rgba(255, 255, 255, 0.08);
+
+// font size
+
+
+//mixins
+@mixin flexProperty ($horizontal,$vertical,$wrap, $direction) {
+    justify-content: $horizontal;
+    align-items: $vertical;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+}
+
+@mixin dimensions ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin background ($Size, $repeat, $position) {
+    background-size: $bcSize;
+    background-repeat: $repeat;
+    background-position: $position;
+}
+@mixin absolute ($top, $right, $left) {
+    top: $top;
+    right: $right;
+    left: $left;
+}
+@mixin textStyle ($weight, $size, $height, $spacing, $transform, $color) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $spacing;
+    text-transform: $transform;
+    color: $color;
+}
+
+
+//body and header styling
+html {
+    font-size: 62.5%;
+    font-style: normal;
+    body {
+        position: relative;
+        font-family: 'Barlow', sans-serif;
+        padding: 13.9rem 2.4rem 0 2.4rem;
+        background: url(../starter-code/assets/home/background-home-mobile.jpg);
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: top;
+        header {
+            padding: 2.4rem 2.4rem 0 2.4rem;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            #logo {
+                @include dimensions(4rem,4rem);
+            }
+            .hamburger {
+                #navbar-icon {
+                   transition: all 0.3s;
+                }
+
+            }
+            .hamburger.active {
+                #navbar-icon {
+                    transform: rotate(-90deg);
+                }
+            }
+            .navbar {
+                transform: translateX(35.4rem);
+                display: block;
+                padding: 2.4rem;
+                position: absolute;
+                @include absolute(0rem, 0rem, unset);
+                @include dimensions(25.4rem, 100vh);
+                .list{
+                    display: block;
+                    display: flex;
+                    @include flexProperty(left, center, wrap, column);
+                }
+                transition:  all 0.5s;
+                background: $bc-color;
+                backdrop-filter: blur(4.07742rem);
+                .list {
+                    margin: 12rem 0 0 3.2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3.2rem;
+                    align-items: flex-start;
+                    @include textStyle(700, 1.6rem, unset, 0.27rem, uppercase, $white);
+                }
+            }
+            .navbar.active {
+                transform: translateX(0rem);
+            }
+        }
+    }
+    
+}
+
+//home section styling
+.home {
+    margin-top: 0.8rem;
+    display: flex;
+    text-align: center;
+    @include flexProperty(flex-start,center,wrap,column);
+    gap: 8.1rem;
+    .text-box {
+        h1 {
+            @include textStyle(400, 8rem, 10rem, unset, uppercase ,$white);
+            font-family: 'Bellefair', serif;
+        }
+        p {
+            margin-top: 1.6rem;
+            @include textStyle(400, 1.5rem, 2.5rem, unset, unset ,$light);
+            max-width: 42.5rem;
+            text-align: center;
+        }
+    }
+    .space-button {
+        @include dimensions(15rem,15rem);
+        border-radius: 50%;
+        background-color: $white;
+        @include textStyle(400, 2rem, 2.3rem, 0.125rem, uppercase, $dark);
+        font-family: 'Bellefair', serif;
+        display: flex;
+        @include flexProperty(center, center, unset, unset);
+        outline-style: solid;
+        outline-width: 0rem;
+        transition: all 0.3s linear;
+    }
+    .space-button:hover {
+        outline-width: 4.8rem;
+        outline-color: rgba(255, 255, 255, 20.36%);
+    }
+    display: none;
+}
+
+.destination {
+    background-color: red;
+    text-align: center;
+    img {
+        @include dimensions(17rem, 17rem);
+    }
+    
+}
+
+
