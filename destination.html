@@ -10,17 +10,17 @@
     <script src=".//script.js" defer></script>
     <title> Space-tourism-website </title>
   </head>
-  <body class="home-body">
+  <body class="destination-body">
         <header> 
             <img id="logo" src="./starter-code/assets/shared/logo.svg" alt="logo">
             <nav class="navbar">
                 <ul class="list">
-                    <li class="active-page nav-home">
+                    <li class="nav-home">
                         <a href="index.html">
                             <span class="num">00</span><span>home</span>  
                         </a>
                     </li>
-                    <li class="nav-destination">
+                    <li class="active-page nav-destination">
                         <a href="destination.html">
                             <span class="num">01</span><span>destination</span>
                         </a>
@@ -41,17 +41,38 @@
                 <img id="navbar-icon" src="./starter-code/assets/shared/icon-hamburger.svg" alt="icon-hamburger">
             </div>
         </header>
-        <section class="home">
-            <div class="text-box">
-                <h2>SO, YOU WANT TO TRAVEL TO</h2>
-                <h1>space</h1>
-                <p>Let's face it; if you want to go to space, you might as well genuinely go to outer space 
-                and not hover kind of on the edge of it. Well sit back, and relax because we'll give you
-                a truly out of this world experience!</p>
+        <section class="destination">
+            <div class="destination-imagebox">
+                <h2>
+                    <span class="num">01</span><span>Pick your destination</span> 
+                </h2>
+                <img id="planet" src="./starter-code/assets/destination/image-moon.png" alt="image-moon">
             </div>
-            <div class="space-button">
-                <span>explore</span>
+            <div class="destination-textbox">
+                <div class="names">
+                    <span>moon</span>
+                    <span>mars</span>
+                    <span>europa</span>
+                    <span>titan</span>
+                </div>
+                <h1 id="name">moon</h1>
+                <p class="description">
+                    See our planet as you've never seen it before. A perfect relaxing trip away to help regain 
+                    perspective and come back refreshed. While you're there, take in some history by visiting 
+                    the Luna 2 and Apollo 11 landing sites.
+                </p>
+                <div>
+                    <div class="distance">
+                        <span class="text">AVG. DISTANCE</span>
+                        <span class="number">384,400 km</span>
+                    </div>
+                    <div class="time-period">
+                        <span class="text">Est. travel time</span>
+                        <span class="number">3 days</span>
+                    </div>
+                </div>
             </div>
         </section>
   </body>
 </html>
+

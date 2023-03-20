@@ -1,0 +1,293 @@
+@use "style" as*;
+
+@media (min-width: 768px) {
+    html {
+        .home-body {
+            background-image: url(../starter-code/assets/home/background-home-tablet.jpg);
+            background-size: auto;
+            background-repeat: repeat;
+            background-position: center;
+        }
+        body {
+            padding: 13.6rem 3.9rem 0 3.9rem;
+            header {
+                padding: 3.9rem 3.9rem 0 3.9rem;
+                #logo {
+                    @include dimensions(4.8rem,4.8rem);
+                }
+                .hamburger {
+                    display: none;
+                }
+                .navbar {
+                    transform: translateX(0);
+                    display: flex;
+                    @include flexProperty (center, center, nowrap, row);
+                    padding: 0 4.6rem 0 4.6rem;
+                    top: 0;
+                    right: 0;
+                    @include dimensions(47.5rem, 9.4rem);
+                    .list {
+                        height: 100%;
+                        display: flex;
+                        @include flexProperty(left, center, nowrap, column);
+                        width: 100%;
+                        margin: unset;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 2.7rem;
+                        justify-content: center;
+                        @include textStyle(400, 1.4rem, 1.7rem, 0.23rem, uppercase, $white);
+                        li {
+                            height: 100%;
+                            width: unset;
+                            padding-top: 3.7rem;
+                            .num {
+                                display: none;
+                            }
+                        }
+
+                        li::before {
+                        content: '';
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            top: unset;
+                            height: 0.3rem;
+                            width: 100%;
+                            transform: scaleX(0);
+                            transform-origin: left;
+                        }
+                            
+                        li:hover::before,
+                        li:focus::before {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    //home section styling
+    .home {
+        margin-top: 6.6rem;
+        gap: 15.6rem;
+        .text-box {
+            h2 {
+                @include textStyle(400, 1.6rem, 1.9rem, 0.27rem, uppercase ,$light);
+            }
+            h1 {
+                @include textStyle(400, 15rem, 15rem, 0.1rem, uppercase ,$white);
+                margin: 2.4rem 0;
+            }
+            p {
+                @include textStyle(400, 1.6rem, 2.8rem, 0.1rem, unset ,$light);
+                max-width: 44.4rem;
+            }
+        }
+        .space-button {
+            @include dimensions(24.2rem,24.2rem);
+            @include textStyle(400, 3.2rem, 3.7rem, 00.2rem, uppercase, $dark);
+            margin-bottom: 9rem;
+        }
+        .space-button:hover {
+            outline-width: 7.74rem;
+        }
+    }
+    //styling of destination section
+    .destination-body {
+        background: url(../starter-code/assets/destination/background-destination-tablet.jpg);
+        margin-bottom: 13.6rem;
+    }
+    .destination {
+        gap: 5.3rem;
+        .destination-imagebox {
+            width: 100%
+        }
+        h2 {
+            @include textStyle(400, 2.0rem, 2.4rem, 0.338rem, uppercase, $white);
+            text-align: left;
+            .num {
+                margin-right: 1.6rem;
+            }
+        }
+        #planet {
+            @include dimensions(30rem,30rem);
+            margin-top: 6rem;
+        }
+        .names {
+            @include textStyle(400, 1.6rem, 1.9rem, 0.27rem, uppercase, $light);
+            justify-content: flex-start;
+            gap: 2.3rem;
+            span {
+                padding-bottom: 1.2rem;
+            }
+        }
+        #name {
+            @include textStyle(400, 10rem, 11.5rem, 100%, uppercase, $white);
+            margin: 3.7rem 0 1.4rem 0;
+        }
+        .destination-textbox {
+            width: 44.4rem;
+            > div:nth-of-type(2) {
+                padding: 0;
+                div {
+                    padding: unset;
+                }
+            }
+        }
+        .description {
+            @include textStyle(400, 1.8rem, 3.2rem, unset, unset, $white);
+            max-width: unset;
+            padding-bottom: 5.4rem;
+        }
+        .time-period {
+            margin: unset;
+        }
+        .distance, .time-period {
+            @include flexProperty(center, center, nowrap, column);
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1024px) {
+    html {
+        .home-body {
+            background-image: url(../starter-code/assets/home/background-home-desktop.jpg);
+            background-size: cover;
+        }
+        body {
+            padding: 21.2rem 0 0 0;
+            header {
+                padding: 6.4rem 6.5rem 0 6.5rem;
+                #logo {
+                    @include dimensions(4.8rem,4.8rem);
+                }
+                .navbar {
+                    padding: 0 7.1rem 0 5.8rem;
+                    top: 4rem;
+                    @include dimensions(83rem, 9.4rem);
+                    .list {
+                        height: 100%;
+                        display: flex;
+                        @include flexProperty(left, center, nowrap, column);
+                        //width: 100%;
+                        //margin: unset;
+                        //display: flex;
+                        flex-direction: row;
+                        gap: 4.8rem;
+                        justify-content: space-between;
+                        @include textStyle(400, 1.6rem, 1.9rem, 0.27rem, uppercase, $white);
+                        li {
+                            .num {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+    }
+//home section styling
+.home {
+    margin-top: 17.5rem;
+    gap: 38.6rem;
+    flex-direction: row;
+    justify-content: center;
+    .text-box {
+        h2 {
+            @include textStyle(400, 2.8rem, 3.4rem, 0.472rem, uppercase ,$light);
+        }
+        h1 {
+            line-height: 17.2rem;
+        }
+        p {
+            @include textStyle(400, 1.8rem, 3.2rem, 0.01rem, unset ,$light);
+            margin: 0 auto;
+            text-align: left;
+        }
+    }
+    .space-button {
+        @include dimensions(27.4rem,27.4rem);
+        margin-bottom: 9rem;
+    }
+    .space-button:hover {
+        outline-width: 8.74rem;
+    }
+    margin-bottom: 13.1rem;
+}
+    //styling of destination section
+    .destination-body {
+        background: url(../starter-code/assets/destination/background-destination-desktop.jpg);
+        background-size: cover;
+    }
+    .destination {
+        @include flexProperty(space-around,center,nowrap,row);
+        gap: unset;
+        .destination-imagebox {
+            width: 50.85rem;
+        }
+        h2 {
+            @include textStyle(400, 2.8rem, 3.6rem, 0.472rem, uppercase, $white);
+            text-align: left;
+            .num {
+                margin-right: 1.6rem;
+            }
+        }
+        #planet {
+            @include dimensions(44.5rem,44.5rem);
+            margin-top: 9.7rem;
+            margin-left: auto;
+            margin-right: -6.35rem;
+        }
+        .names {
+            @include textStyle(400, 1.4rem, 1.6rem, 0.192rem, uppercase, $light);
+        }
+        #name {
+            @include textStyle(400, 8rem, 9.168rem, 100%, uppercase, $white);
+            margin: 3.2rem 0 0.8rem 0;
+        }
+        .destination-textbox {
+            text-align: left;
+            > div:nth-of-type(2) {
+                display: flex;
+                @include flexProperty(space-around, center, nowrap, row);
+                padding: 0;
+            }
+        }
+        .description {
+            @include textStyle(400, 1.6rem, 2.8rem, unset, unset, $white);
+            max-width: 57.3rem;
+            padding-bottom: 4.9rem;
+            margin-bottom: 2.9rem;
+        }
+        .time-period {
+            margin: unset;
+        }
+        .distance, .time-period {
+            @include flexProperty(center, center, nowrap, column);
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+    } 
+}

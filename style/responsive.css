@@ -1,0 +1,655 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300&family=Red+Hat+Text:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+html {
+  font-size: 62.5%;
+  font-style: normal;
+}
+html .home-body {
+  background: url(../starter-code/assets/home/background-home-mobile.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+html body {
+  padding: 8.8rem 2.4rem 0rem 2.4rem;
+  position: relative;
+  font-family: "Barlow", sans-serif;
+}
+html body header {
+  padding: 2.4rem 2.4rem 0 2.4rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body header #logo {
+  width: 4rem;
+  height: 4rem;
+}
+html body header .hamburger #navbar-icon {
+  transition: all 0.3s;
+}
+html body header .hamburger.active #navbar-icon {
+  transform: rotate(-90deg);
+}
+html body header .navbar {
+  transform: translateX(35.4rem);
+  display: block;
+  padding: 2.4rem;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  left: unset;
+  width: 25.4rem;
+  height: 100vh;
+  transition: all 0.5s;
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(4.07742rem);
+          backdrop-filter: blur(4.07742rem);
+}
+html body header .navbar .list {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 9.6rem -2.4rem 0 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: flex-start;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.27rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+html body header .navbar .list .num {
+  margin-right: 1.1rem;
+  font-weight: 600;
+}
+html body header .navbar .list li {
+  position: relative;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+html body header .navbar .list .border-left {
+  border-right: solid #ffffff 0.3rem;
+}
+html body header .navbar .list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.5021);
+  transition: transform 300ms ease-in-out;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+html body header .navbar .list li:hover::before,
+html body header .navbar .list li:focus::before {
+  transform: scaleY(1);
+}
+html body header .navbar .list .active-page::before {
+  background-color: #ffffff;
+  transform: scaleY(1);
+}
+html body header .navbar.active {
+  transform: translateX(0rem);
+}
+
+.home {
+  display: flex;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8.1rem;
+  margin-top: 2.4rem;
+}
+.home .text-box h2 {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.338rem;
+  text-transform: uppercase;
+  color: #D0D6F9;
+  padding-left: 1rem;
+}
+.home .text-box h1 {
+  font-weight: 400;
+  font-size: 8rem;
+  line-height: 10rem;
+  letter-spacing: unset;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Bellefair", serif;
+  margin: 1.6rem 0;
+}
+.home .text-box p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+  text-transform: unset;
+  color: #D0D6F9;
+  max-width: 42.5rem;
+  text-align: center;
+}
+.home .space-button {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  color: #0B0D17;
+  font-family: "Bellefair", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: unset;
+  flex-direction: unset;
+  outline-style: solid;
+  outline-width: 0rem;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.home .space-button:hover {
+  outline-width: 4.8rem;
+  outline-color: rgba(255, 255, 255, 0.2036);
+}
+
+.destination-body {
+  background: url(../starter-code/assets/destination/background-destination-mobile.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.destination {
+  display: flex;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2.6rem;
+}
+.destination h2 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.27rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.destination h2 .num {
+  font-weight: 700;
+  margin-right: 1rem;
+  color: #D0D6F9;
+}
+.destination #planet {
+  width: 17rem;
+  height: 17rem;
+  margin-top: 3.2rem;
+}
+.destination .names {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.236rem;
+  text-transform: uppercase;
+  color: #D0D6F9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: unset;
+  flex-direction: unset;
+  gap: 1.7rem;
+}
+.destination .names span {
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+.destination .names span:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.5021);
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.destination .names span:hover::before, .destination .names span:focus::before {
+  transform: scaleX(1);
+}
+.destination #name {
+  font-weight: 400;
+  font-size: 5.6rem;
+  line-height: 6.4rem;
+  letter-spacing: 100%;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Bellefair", serif;
+  margin: 2rem 0 0.1rem 0;
+}
+.destination .description {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: unset;
+  text-transform: unset;
+  color: #ffffff;
+  max-width: 42.5rem;
+  padding-bottom: 3.2rem;
+  border-bottom: solid #383B4B 0.1rem;
+  margin-bottom: 3.2rem;
+}
+.destination .time-period {
+  margin: 3.2rem 0 5.8rem 0;
+}
+.destination .distance, .destination .time-period {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 2.5rem;
+}
+.destination .text {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.236rem;
+  text-transform: uppercase;
+  color: #D0D6F9;
+}
+.destination .number {
+  font-weight: 400;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.3209rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Bellefair", serif;
+}
+
+@media (min-width: 768px) {
+  html .home-body {
+    background-image: url(../starter-code/assets/home/background-home-tablet.jpg);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+  }
+  html body {
+    padding: 13.6rem 3.9rem 0 3.9rem;
+  }
+  html body header {
+    padding: 3.9rem 3.9rem 0 3.9rem;
+  }
+  html body header #logo {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  html body header .hamburger {
+    display: none;
+  }
+  html body header .navbar {
+    transform: translateX(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 0 4.6rem 0 4.6rem;
+    top: 0;
+    right: 0;
+    width: 47.5rem;
+    height: 9.4rem;
+  }
+  html body header .navbar .list {
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+    margin: unset;
+    display: flex;
+    flex-direction: row;
+    gap: 2.7rem;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.23rem;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  html body header .navbar .list li {
+    height: 100%;
+    width: unset;
+    padding-top: 3.7rem;
+  }
+  html body header .navbar .list li .num {
+    display: none;
+  }
+  html body header .navbar .list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: unset;
+    height: 0.3rem;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  html body header .navbar .list li:hover::before,
+  html body header .navbar .list li:focus::before {
+    transform: scaleX(1);
+  }
+  .home {
+    margin-top: 6.6rem;
+    gap: 15.6rem;
+  }
+  .home .text-box h2 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.27rem;
+    text-transform: uppercase;
+    color: #D0D6F9;
+  }
+  .home .text-box h1 {
+    font-weight: 400;
+    font-size: 15rem;
+    line-height: 15rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 2.4rem 0;
+  }
+  .home .text-box p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.1rem;
+    text-transform: unset;
+    color: #D0D6F9;
+    max-width: 44.4rem;
+  }
+  .home .space-button {
+    width: 24.2rem;
+    height: 24.2rem;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.7rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: #0B0D17;
+    margin-bottom: 9rem;
+  }
+  .home .space-button:hover {
+    outline-width: 7.74rem;
+  }
+  .destination-body {
+    background: url(../starter-code/assets/destination/background-destination-tablet.jpg);
+    margin-bottom: 13.6rem;
+  }
+  .destination {
+    gap: 5.3rem;
+  }
+  .destination .destination-imagebox {
+    width: 100%;
+  }
+  .destination h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.338rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: left;
+  }
+  .destination h2 .num {
+    margin-right: 1.6rem;
+  }
+  .destination #planet {
+    width: 30rem;
+    height: 30rem;
+    margin-top: 6rem;
+  }
+  .destination .names {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.27rem;
+    text-transform: uppercase;
+    color: #D0D6F9;
+    justify-content: flex-start;
+    gap: 2.3rem;
+  }
+  .destination .names span {
+    padding-bottom: 1.2rem;
+  }
+  .destination #name {
+    font-weight: 400;
+    font-size: 10rem;
+    line-height: 11.5rem;
+    letter-spacing: 100%;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 3.7rem 0 1.4rem 0;
+  }
+  .destination .destination-textbox {
+    width: 44.4rem;
+  }
+  .destination .destination-textbox > div:nth-of-type(2) {
+    padding: 0;
+  }
+  .destination .destination-textbox > div:nth-of-type(2) div {
+    padding: unset;
+  }
+  .destination .description {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    letter-spacing: unset;
+    text-transform: unset;
+    color: #ffffff;
+    max-width: unset;
+    padding-bottom: 5.4rem;
+  }
+  .destination .time-period {
+    margin: unset;
+  }
+  .destination .distance, .destination .time-period {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  html .home-body {
+    background-image: url(../starter-code/assets/home/background-home-desktop.jpg);
+    background-size: cover;
+  }
+  html body {
+    padding: 21.2rem 0 0 0;
+  }
+  html body header {
+    padding: 6.4rem 6.5rem 0 6.5rem;
+  }
+  html body header #logo {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  html body header .navbar {
+    padding: 0 7.1rem 0 5.8rem;
+    top: 4rem;
+    width: 83rem;
+    height: 9.4rem;
+  }
+  html body header .navbar .list {
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-direction: row;
+    gap: 4.8rem;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.27rem;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  html body header .navbar .list li .num {
+    display: inline-block;
+  }
+  .home {
+    margin-top: 17.5rem;
+    gap: 38.6rem;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 13.1rem;
+  }
+  .home .text-box h2 {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.472rem;
+    text-transform: uppercase;
+    color: #D0D6F9;
+  }
+  .home .text-box h1 {
+    line-height: 17.2rem;
+  }
+  .home .text-box p {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.01rem;
+    text-transform: unset;
+    color: #D0D6F9;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .home .space-button {
+    width: 27.4rem;
+    height: 27.4rem;
+    margin-bottom: 9rem;
+  }
+  .home .space-button:hover {
+    outline-width: 8.74rem;
+  }
+  .destination-body {
+    background: url(../starter-code/assets/destination/background-destination-desktop.jpg);
+    background-size: cover;
+  }
+  .destination {
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: unset;
+  }
+  .destination .destination-imagebox {
+    width: 50.85rem;
+  }
+  .destination h2 {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+    letter-spacing: 0.472rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: left;
+  }
+  .destination h2 .num {
+    margin-right: 1.6rem;
+  }
+  .destination #planet {
+    width: 44.5rem;
+    height: 44.5rem;
+    margin-top: 9.7rem;
+    margin-left: auto;
+    margin-right: -6.35rem;
+  }
+  .destination .names {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.192rem;
+    text-transform: uppercase;
+    color: #D0D6F9;
+  }
+  .destination #name {
+    font-weight: 400;
+    font-size: 8rem;
+    line-height: 9.168rem;
+    letter-spacing: 100%;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 3.2rem 0 0.8rem 0;
+  }
+  .destination .destination-textbox {
+    text-align: left;
+  }
+  .destination .destination-textbox > div:nth-of-type(2) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 0;
+  }
+  .destination .description {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    letter-spacing: unset;
+    text-transform: unset;
+    color: #ffffff;
+    max-width: 57.3rem;
+    padding-bottom: 4.9rem;
+    margin-bottom: 2.9rem;
+  }
+  .destination .time-period {
+    margin: unset;
+  }
+  .destination .distance, .destination .time-period {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}/*# sourceMappingURL=responsive.css.map */

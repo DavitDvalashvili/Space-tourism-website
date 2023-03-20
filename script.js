@@ -18,7 +18,3 @@ hamburger.addEventListener("click", () => {
 })
 
 
-body.addEventListener("resize", () => {
-    var width = body.width;
-    console.log(width);
-})
