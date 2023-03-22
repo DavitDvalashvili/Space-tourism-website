@@ -150,7 +150,50 @@
             flex-direction: column;
             gap: 1.2rem;
         }
-    } 
+    }
+    //styling of the crew section
+    .crew-body {
+        background: url(../starter-code/assets/crew/background-crew-tablet.jpg);
+        h2 {
+            @include textStyle(400, 2rem, 2.4rem, 0.38rem, uppercase, $white);
+            text-align: left;
+            .num {
+                margin-right: 1.2rem;
+            }
+        }
+        .flexbox {
+            margin-top: 6rem;
+            gap: 4rem;
+            #crew-member {
+                width: 100%;
+                border-bottom: solid 0.1rem #383B4B;
+                img {
+                    height: 53.2rem;
+                    margin-bottom: unset;
+                }
+                order: 2;
+            }
+            .text-box {
+                #nav-crew {
+                    order: 4;
+                }
+                #title {
+                    margin: unset;
+                    @include textStyle(400, 2.4rem, 2.75rem, unset, uppercase, $white);
+                }
+                #name {
+                    @include textStyle(400, 4rem, 4.584rem, unset, uppercase, $white);
+                    margin: 0.8rem 0 1.6rem 0;
+                }
+                #about {
+                    margin: 0 0 4rem 0;
+                    @include textStyle(400, 1.6rem, 2.5rem, unset, unset, $light);
+                    max-width: 45.8rem;
+    
+                }
+            }
+        }
+    }
 }
 
 
