@@ -36,6 +36,7 @@ html body header .hamburger.active #navbar-icon {
   transform: rotate(-90deg);
 }
 html body header .navbar {
+  background-color: green;
   transform: translateX(35.4rem);
   display: block;
   padding: 2.4rem;
@@ -289,6 +290,98 @@ html body header .navbar.active {
   text-transform: uppercase;
   color: #ffffff;
   font-family: "Bellefair", serif;
+}
+
+.crew-body {
+  background: url(../starter-code/assets/crew/background-crew-mobile.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.crew h2 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.27rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+.crew h2 .num {
+  font-weight: 700;
+  margin-right: 1rem;
+  color: #D0D6F9;
+  margin: 0 auto;
+}
+.crew .flexbox {
+  margin-top: 3.3rem;
+  display: flex;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.crew .flexbox #crew-member {
+  width: 100%;
+  border-bottom: solid 0.1rem #383B4B;
+}
+.crew .flexbox #crew-member img {
+  width: 17.712rem;
+  margin-bottom: -0.1rem;
+}
+.crew .flexbox .text-box #nav-crew {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 1.6rem;
+}
+.crew .flexbox .text-box #nav-crew div {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 17.44%;
+  cursor: pointer;
+}
+.crew .flexbox .text-box #nav-crew div:nth-of-type(1) {
+  opacity: 1;
+}
+.crew .flexbox .text-box #nav-crew div:hover {
+  opacity: 50.01%;
+}
+.crew .flexbox .text-box #title {
+  margin: 3.2rem 0 0.8rem 0;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.834rem;
+  letter-spacing: unset;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 50.01%;
+  font-family: "Bellefair", serif;
+}
+.crew .flexbox .text-box #name {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.705rem;
+  letter-spacing: unset;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Bellefair", serif;
+}
+.crew .flexbox .text-box #about {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: unset;
+  text-transform: unset;
+  color: #D0D6F9;
+  max-width: 37.5rem;
 }
 
 @media (min-width: 768px) {
