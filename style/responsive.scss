@@ -156,7 +156,7 @@
         background: url(../starter-code/assets/crew/background-crew-tablet.jpg);
         h2 {
             @include textStyle(400, 2rem, 2.4rem, 0.38rem, uppercase, $white);
-            text-align: left;
+            text-align: center;
             .num {
                 margin-right: 1.2rem;
             }
@@ -251,34 +251,34 @@
         }
 
     }
-//home section styling
-.home {
-    margin-top: 17.5rem;
-    gap: 38.6rem;
-    flex-direction: row;
-    justify-content: center;
-    .text-box {
-        h2 {
-            @include textStyle(400, 2.8rem, 3.4rem, 0.472rem, uppercase ,$light);
+    //home section styling
+    .home {
+        margin-top: 17.5rem;
+        gap: 38.6rem;
+        flex-direction: row;
+        justify-content: center;
+        .text-box {
+            h2 {
+                @include textStyle(400, 2.8rem, 3.4rem, 0.472rem, uppercase ,$light);
+            }
+            h1 {
+                line-height: 17.2rem;
+            }
+            p {
+                @include textStyle(400, 1.8rem, 3.2rem, 0.01rem, unset ,$light);
+                margin: 0 auto;
+                text-align: left;
+            }
         }
-        h1 {
-            line-height: 17.2rem;
+        .space-button {
+            @include dimensions(27.4rem,27.4rem);
+            margin-bottom: 9rem;
         }
-        p {
-            @include textStyle(400, 1.8rem, 3.2rem, 0.01rem, unset ,$light);
-            margin: 0 auto;
-            text-align: left;
+        .space-button:hover {
+            outline-width: 8.74rem;
         }
+        margin-bottom: 13.1rem;
     }
-    .space-button {
-        @include dimensions(27.4rem,27.4rem);
-        margin-bottom: 9rem;
-    }
-    .space-button:hover {
-        outline-width: 8.74rem;
-    }
-    margin-bottom: 13.1rem;
-}
     //styling of destination section
     .destination-body {
         background: url(../starter-code/assets/destination/background-destination-desktop.jpg);
@@ -332,5 +332,66 @@
             flex-direction: column;
             gap: 1.2rem;
         }
-    } 
+    }
+    //styling of crew section
+    .crew-body {
+        background: url(../starter-code/assets/crew/background-crew-desktop.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 21.2rem 6.5rem 0 6.5rem;
+        h2 {
+            @include textStyle(400, 2.8rem, 3.36rem, 0.476rem, uppercase, $white);
+            text-align: left;
+            .num {
+                margin-right: 1.7rem;
+            }
+        }
+        .flexbox {
+            margin-top: unset;
+            gap: 8rem;
+            @include flexProperty(space-between,flex-end,nowrap,row);
+            #crew-member {
+                width: unset;
+                border-bottom: solid 0.1rem #383B4B;
+                img {
+                    height: unset;
+                    margin-bottom: unset;
+                }
+                order: 2;
+            }
+            .text-box {
+                align-items: flex-start;
+                #nav-crew {
+                    gap: 2.4rem;
+                    div {
+                        @include dimensions(1.5rem,1.5rem);
+                        border-radius: 50%;
+                    }
+                    margin-bottom: 9.4rem;
+                }
+                #title {
+                    margin: 15.4rem 0 1.5rem 0;
+                    @include textStyle(400, 3.2rem, 3.667rem, unset, uppercase, $white);
+                }
+                #name {
+                    text-align: left;
+                    @include textStyle(400, 5.6rem, 6.418rem, unset, uppercase, $white);
+                    margin: unset;
+                }
+                #about {
+                    text-align: left;
+                    margin: 2.7rem 0 12rem 0;
+                    @include textStyle(400, 1.8rem, 3.2rem, unset, unset, $light);
+                    max-width: 44.4rem;
+    
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 144px) {
+    .crew-body {
+        padding: 21.2rem 13.8rem 0 16.55rem;
+    }
 }

@@ -603,7 +603,7 @@ html body header .navbar.active {
     letter-spacing: 0.38rem;
     text-transform: uppercase;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
   }
   .crew-body h2 .num {
     margin-right: 1.2rem;
@@ -812,5 +812,87 @@ html body header .navbar.active {
     flex-direction: column;
     flex-direction: column;
     gap: 1.2rem;
+  }
+  .crew-body {
+    background: url(../starter-code/assets/crew/background-crew-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 21.2rem 6.5rem 0 6.5rem;
+  }
+  .crew-body h2 {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3.36rem;
+    letter-spacing: 0.476rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: left;
+  }
+  .crew-body h2 .num {
+    margin-right: 1.7rem;
+  }
+  .crew-body .flexbox {
+    margin-top: unset;
+    gap: 8rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .crew-body .flexbox #crew-member {
+    width: unset;
+    border-bottom: solid 0.1rem #383B4B;
+    order: 2;
+  }
+  .crew-body .flexbox #crew-member img {
+    height: unset;
+    margin-bottom: unset;
+  }
+  .crew-body .flexbox .text-box {
+    align-items: flex-start;
+  }
+  .crew-body .flexbox .text-box #nav-crew {
+    gap: 2.4rem;
+    margin-bottom: 9.4rem;
+  }
+  .crew-body .flexbox .text-box #nav-crew div {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+  }
+  .crew-body .flexbox .text-box #title {
+    margin: 15.4rem 0 1.5rem 0;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.667rem;
+    letter-spacing: unset;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .crew-body .flexbox .text-box #name {
+    text-align: left;
+    font-weight: 400;
+    font-size: 5.6rem;
+    line-height: 6.418rem;
+    letter-spacing: unset;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: unset;
+  }
+  .crew-body .flexbox .text-box #about {
+    text-align: left;
+    margin: 2.7rem 0 12rem 0;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    letter-spacing: unset;
+    text-transform: unset;
+    color: #D0D6F9;
+    max-width: 44.4rem;
+  }
+}
+@media (min-width: 144px) {
+  .crew-body {
+    padding: 21.2rem 13.8rem 0 16.55rem;
   }
 }/*# sourceMappingURL=responsive.css.map */
