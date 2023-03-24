@@ -393,6 +393,113 @@ html body header .navbar.active {
   max-width: 37.5rem;
 }
 
+.technology-body {
+  background: url(../starter-code/assets/technology/background-technology-mobile.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: unset;
+  padding-right: unset;
+}
+
+.technology h2 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.27rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+.technology h2 .num {
+  font-weight: 700;
+  margin-right: 1rem;
+  color: #D0D6F9;
+}
+.technology .flexbox {
+  margin-top: 3.2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 3.4rem;
+}
+.technology .flexbox #technology-image .landscape {
+  width: 100%;
+}
+.technology .flexbox #technology-image .portrate {
+  display: none;
+}
+.technology .flexbox .text-box-technology {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.technology .flexbox .text-box-technology #nav-technology {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 1.6rem;
+}
+.technology .flexbox .text-box-technology #nav-technology div {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: unset;
+  border: solid 0.1rem #ffffff;
+  cursor: pointer;
+  background-color: unset;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.834rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Bellefair", serif;
+  padding: 1.1rem 0;
+}
+.technology .flexbox .text-box-technology #nav-technology div:nth-of-type(1) {
+  background-color: #ffffff;
+  color: #0B0D17;
+}
+.technology .flexbox .text-box-technology #nav-technology div:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.technology .flexbox .text-box-technology #terminology {
+  margin: 2.6rem 0 0.9rem 0;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.68rem;
+  letter-spacing: 0.234rem;
+  text-transform: uppercase;
+  color: #D0D6F9;
+}
+.technology .flexbox .text-box-technology #technology-name {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.705rem;
+  letter-spacing: unset;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Bellefair", serif;
+}
+.technology .flexbox .text-box-technology #about-technology {
+  margin: 1.6rem 2.4rem 8.1rem 2.4rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: unset;
+  text-transform: unset;
+  color: #D0D6F9;
+  max-width: 37.5rem;
+}
+
 @media (min-width: 768px) {
   html .home-body {
     background-image: url(../starter-code/assets/home/background-home-tablet.jpg);
@@ -652,6 +759,68 @@ html body header .navbar.active {
     color: #D0D6F9;
     max-width: 45.8rem;
   }
+  .technology-body {
+    background: url(../starter-code/assets/technology/background-technology-tablet.jpg);
+  }
+  .technology h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.38rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: left;
+    margin-left: 3.85rem;
+  }
+  .technology h2 .num {
+    margin-right: 1.2rem;
+    opacity: 25%;
+  }
+  .technology .flexbox {
+    margin-top: 6rem;
+    gap: 5.6rem;
+  }
+  .technology .flexbox #technology-image img {
+    width: 100%;
+  }
+  .technology .flexbox .text-box-technology #nav-technology div {
+    width: 6rem;
+    height: 6rem;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.75rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 1.6rem 0;
+  }
+  .technology .flexbox .text-box-technology #terminology {
+    margin: 4.4rem 0 1.6rem 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.92rem;
+    letter-spacing: 0.27rem;
+    text-transform: uppercase;
+    color: #D0D6F9;
+  }
+  .technology .flexbox .text-box-technology #technology-name {
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.584rem;
+    letter-spacing: unset;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .technology .flexbox .text-box-technology #about-technology {
+    margin: 1.6rem 2.4rem 9.7rem 2.4rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    letter-spacing: unset;
+    text-transform: unset;
+    color: #D0D6F9;
+    max-width: 45.8rem;
+  }
 }
 @media (min-width: 1024px) {
   html .home-body {
@@ -882,6 +1051,88 @@ html body header .navbar.active {
   .crew-body .flexbox .text-box #about {
     text-align: left;
     margin: 2.7rem 0 12rem 0;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    letter-spacing: unset;
+    text-transform: unset;
+    color: #D0D6F9;
+    max-width: 44.4rem;
+  }
+  .technology-body {
+    background: url(../starter-code/assets/technology/background-technology-desktop.jpg);
+    padding-left: 6.5rem;
+    margin: 0 auto;
+    max-width: 144rem;
+  }
+  .technology h2 {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3.66rem;
+    letter-spacing: 0.472rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: left;
+    margin-left: unset;
+  }
+  .technology h2 .num {
+    margin-right: 1.8rem;
+  }
+  .technology .flexbox {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-top: 2.6rem;
+  }
+  .technology .flexbox #technology-image {
+    order: 2;
+  }
+  .technology .flexbox #technology-image .landscape {
+    display: none;
+  }
+  .technology .flexbox #technology-image .portrate {
+    display: block;
+    width: 51.5rem;
+    height: 52.5rem;
+  }
+  .technology .flexbox .text-box-technology {
+    justify-content: center;
+    align-items: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 8rem;
+    text-align: left;
+  }
+  .technology .flexbox .text-box-technology #nav-technology {
+    flex-direction: column;
+  }
+  .technology .flexbox .text-box-technology #nav-technology div {
+    width: 8rem;
+    height: 8rem;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.667rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    gap: 3.2rem;
+    text-align: center;
+    padding: 2.2rem 0;
+  }
+  .technology .flexbox .text-box-technology #terminology {
+    margin: 0 0 1.1rem 0;
+  }
+  .technology .flexbox .text-box-technology #technology-name {
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.584rem;
+    letter-spacing: unset;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .technology .flexbox .text-box-technology #about-technology {
+    margin: 1.7rem 0;
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 3.2rem;

@@ -44,7 +44,7 @@ $border-color: rgba(255, 255, 255, 0.5021);
 }
 
 
-//body and header styling
+//styling of body and header 
 html {
     font-size: 62.5%;
     font-style: normal;
@@ -144,7 +144,7 @@ html {
     }  
 }
 
-//home section styling
+//styling of home page
 .home {
     display: flex;
     text-align: center;
@@ -186,7 +186,7 @@ html {
     }
 } 
 
-//styling of destination section
+//styling of destination page
 .destination-body {
     background: url(../starter-code/assets/destination/background-destination-mobile.jpg);
     background-size: auto;
@@ -236,6 +236,12 @@ html {
                 transform: scaleX(1);
             }
         }
+        .border-color {
+            &:before {
+                background-color: $white;
+                transform: scaleX(1);
+            }
+        }
     }
     #name {
         @include textStyle(400, 5.6rem, 6.4rem, 100%, uppercase, $white);
@@ -267,7 +273,7 @@ html {
     }
 }
 
-//crew section styling
+//styling of crew page.
 .crew-body {
     background: url(../starter-code/assets/crew/background-crew-mobile.jpg);
     background-size: auto;
@@ -341,6 +347,88 @@ html {
         }
     }
 }
+
+//styling of technology page
+.technology-body {
+    background: url(../starter-code/assets/technology/background-technology-mobile.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: unset;
+    padding-right: unset;
+}
+.technology {
+    h2 {
+        @include textStyle(400, 1.6rem, 1.9rem, 0.27rem, uppercase, $white);
+        text-align: center;
+        .num {
+            font-weight: 700;
+            margin-right: 1rem;
+            color: $light;
+        }
+    }
+    .flexbox {
+        margin-top: 3.2rem;
+        display: flex;
+        @include flexProperty(flex-start,center,wrap,column);
+        gap: 3.4rem;
+        #technology-image {
+            .landscape {
+                width: 100%;
+            }
+            .portrate {
+                display: none;
+            }
+        }
+        .text-box-technology {
+            display: flex;
+            text-align: center;
+            @include flexProperty(center,center, nowrap, column);
+            #nav-technology {
+                display: flex;
+                @include flexProperty(center,center, nowrap, row);
+                gap: 1.6rem;
+                div {
+                    @include dimensions(4rem, 4rem);
+                    border-radius: 50%;
+                    background-color: unset;
+                    border: solid 0.1rem $white;
+                    cursor: pointer;
+                    background-color: unset;
+                    @include textStyle(400, 1.6rem, 1.834rem, 0.1rem, uppercase, $white);
+                    font-family: 'Bellefair', serif;
+                    padding: 1.1rem 0;
+                    &:nth-of-type(1) {
+                        background-color: $white;
+                        color: $dark;
+                    }
+                    &:hover {
+                        border-color: rgba(255,255,255, 25%);
+                    }
+                }
+            }
+            #terminology {
+                margin: 2.6rem 0 0.9rem 0;
+                @include textStyle(400, 1.4rem, 1.68rem, 0.234rem, uppercase, $light);
+            }
+            #technology-name {
+                @include textStyle(400, 2.4rem, 2.705rem, unset, uppercase, $white);
+                font-family: 'Bellefair', serif;
+            }
+            #about-technology {
+                margin: 1.6rem 2.4rem 8.1rem 2.4rem;
+                @include textStyle(400, 1.5rem, 2.5rem, unset, unset, $light);
+                max-width: 37.5rem;
+
+            }
+
+        }
+    }
+}
+
+
+
+
 
 
 
