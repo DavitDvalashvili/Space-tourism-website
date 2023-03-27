@@ -72,7 +72,6 @@ const CrewName = document.querySelector("#name");
 const role = document.querySelector("#title");
 const bio = document.querySelector("#about");
 const crewImage = document.querySelector("#crew-member img");
-console.log(CrewName.textContent);
 
 
 
@@ -104,27 +103,35 @@ function displayCrew() {
 }
 
 
+const navTech = document.querySelectorAll("#nav-technology div");
+const techName = document.querySelector("#technology-name");
+const techDescription = document.querySelector("#about-technology");
+const imageLandscape = document.querySelector(".landscape");
+const imagePortrait = document.querySelector(".portrait");
+
+
 function displayTech() {
-    navCrew.forEach(element => {
+    navTech.forEach(item => {
         // Add a click event listener to each item
-        element.addEventListener("click", (event) => {
-            navCrew.forEach(element => {
-                // Remove the 'backgorund-opacity' class from all items
-                element.classList.remove("background-opacity")
+        item.addEventListener("click", (event) => {
+            navTech.forEach(element => {
+                // Remove the 'color-style' class from all items
+                element.classList.remove("color-style")
             })
-            // Add the 'background-opacity' class to the clicked item
-            let clickTargetCrew = event.target;
-            clickTargetCrew.classList.add("background-opacity");
+            // Add the 'color-style' class to the clicked item
+            let clickTargetTech = event.target;
+            clickTargetTech.classList.add("color-style");
 
             //copies navCrew array
-            const navCrewArr = [...navCrew];
+            const navTechArr = [...navTech];
             //get an index of clickTarget;
-            const indexCrew = navCrewArr.indexOf(clickTargetCrew);
+            const indexTech = navTechArr.indexOf(clickTargetTech);
             //displays data on the screen while clicking on the item
-            CrewName.textContent = data.crew[indexCrew].name;
-            role.textContent = data.crew[indexCrew].role;
-            bio.textContent = data.crew[indexCrew].bio;
-            crewImage.src = data.crew[indexCrew].images.webp;
+            console.log(techName.textContent);
+            techName.textContent = data.technology[indexTech].name;
+            techDescription.textContent = data.technology[indexTech].description;
+            imageLandscape.src = data.technology[indexTech].images.landscape;
+            imagePortrait.src = data.technology[indexTech].images.portrait;
         })
     });
 

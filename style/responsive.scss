@@ -457,7 +457,7 @@
                 .landscape {
                     display: none;
                 }
-                .portrate {
+                .portrait {
                     display: block;
                     @include dimensions(51.5rem,52.5rem);
                 }

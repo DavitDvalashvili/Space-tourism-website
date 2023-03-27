@@ -376,7 +376,7 @@ html {
             .landscape {
                 width: 100%;
             }
-            .portrate {
+            .portrait {
                 display: none;
             }
         }
@@ -398,13 +398,13 @@ html {
                     @include textStyle(400, 1.6rem, 1.834rem, 0.1rem, uppercase, $white);
                     font-family: 'Bellefair', serif;
                     padding: 1.1rem 0;
-                    &:nth-of-type(1) {
-                        background-color: $white;
-                        color: $dark;
-                    }
                     &:hover {
                         border-color: rgba(255,255,255, 25%);
                     }
+                }
+                .color-style {
+                    background-color: $white;
+                    color: $dark;
                 }
             }
             #terminology {

@@ -432,7 +432,7 @@ html body header .navbar.active {
 .technology .flexbox #technology-image .landscape {
   width: 100%;
 }
-.technology .flexbox #technology-image .portrate {
+.technology .flexbox #technology-image .portrait {
   display: none;
 }
 .technology .flexbox .text-box-technology {
@@ -468,12 +468,12 @@ html body header .navbar.active {
   font-family: "Bellefair", serif;
   padding: 1.1rem 0;
 }
-.technology .flexbox .text-box-technology #nav-technology div:nth-of-type(1) {
-  background-color: #ffffff;
-  color: #0B0D17;
-}
 .technology .flexbox .text-box-technology #nav-technology div:hover {
   border-color: rgba(255, 255, 255, 0.25);
+}
+.technology .flexbox .text-box-technology #nav-technology .color-style {
+  background-color: #ffffff;
+  color: #0B0D17;
 }
 .technology .flexbox .text-box-technology #terminology {
   margin: 2.6rem 0 0.9rem 0;

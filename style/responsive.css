@@ -363,7 +363,7 @@ html body header .navbar.active {
 .crew .flexbox .text-box #nav-crew div:hover {
   opacity: 50.01%;
 }
-.crew .flexbox .text-box .background-opacity {
+.crew .flexbox .text-box #nav-crew .background-opacity {
   opacity: 1;
 }
 .crew .flexbox .text-box #title {
@@ -432,7 +432,7 @@ html body header .navbar.active {
 .technology .flexbox #technology-image .landscape {
   width: 100%;
 }
-.technology .flexbox #technology-image .portrate {
+.technology .flexbox #technology-image .portrait {
   display: none;
 }
 .technology .flexbox .text-box-technology {
@@ -468,12 +468,12 @@ html body header .navbar.active {
   font-family: "Bellefair", serif;
   padding: 1.1rem 0;
 }
-.technology .flexbox .text-box-technology #nav-technology div:nth-of-type(1) {
-  background-color: #ffffff;
-  color: #0B0D17;
-}
 .technology .flexbox .text-box-technology #nav-technology div:hover {
   border-color: rgba(255, 255, 255, 0.25);
+}
+.technology .flexbox .text-box-technology #nav-technology .color-style {
+  background-color: #ffffff;
+  color: #0B0D17;
 }
 .technology .flexbox .text-box-technology #terminology {
   margin: 2.6rem 0 0.9rem 0;
@@ -1095,7 +1095,7 @@ html body header .navbar.active {
   .technology .flexbox #technology-image .landscape {
     display: none;
   }
-  .technology .flexbox #technology-image .portrate {
+  .technology .flexbox #technology-image .portrait {
     display: block;
     width: 51.5rem;
     height: 52.5rem;
