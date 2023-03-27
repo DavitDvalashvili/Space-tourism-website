@@ -240,6 +240,10 @@ html body header .navbar.active {
 .destination .names span:hover::before, .destination .names span:focus::before {
   transform: scaleX(1);
 }
+.destination .names .border-color:before {
+  background-color: #ffffff;
+  transform: scaleX(1);
+}
 .destination #name {
   font-weight: 400;
   font-size: 5.6rem;
@@ -356,11 +360,11 @@ html body header .navbar.active {
   opacity: 17.44%;
   cursor: pointer;
 }
-.crew .flexbox .text-box #nav-crew div:nth-of-type(1) {
-  opacity: 1;
-}
 .crew .flexbox .text-box #nav-crew div:hover {
   opacity: 50.01%;
+}
+.crew .flexbox .text-box .background-opacity {
+  opacity: 1;
 }
 .crew .flexbox .text-box #title {
   margin: 3.2rem 0 0.8rem 0;

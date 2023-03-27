@@ -319,12 +319,12 @@ html {
                     background-color: $white;
                     opacity: 17.44%;
                     cursor: pointer;
-                    &:nth-of-type(1) {
-                        opacity: 1;
-                    }
                     &:hover {
                         opacity: 50.01%;
                     }
+                }
+                .background-opacity {
+                    opacity: 1;
                 }
             }
             #title {

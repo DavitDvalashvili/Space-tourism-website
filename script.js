@@ -15,33 +15,121 @@ hamburger.addEventListener("click", () => {
     }
 })
 
+let data;
 
-const getAdvice = async () => {
+const getData = async () => {
     const response = await fetch('./data.json');
-    const data = await response.json();
-    //console.log(data);
-
+    data = await response.json();
+    displayDestination();
+    displayCrew();
+    console.log(data);
+    displayTech();
 }
-getAdvice();
+
+getData();
 
 
+
+//variables from the destination page
 const planetName = document.querySelector("#name");
 const planetDescription = document.querySelector(".description");
 const distance = document.querySelector(".distance .number");
-const takeTime = document.querySelector(".time-period .number");
+const travel = document.querySelector(".time-period .number");
 const destinationsNav = document.querySelectorAll(".planet-name");
+const planetNames = document.querySelectorAll(".names span");
+const planetImage = document.querySelector("#planet");
 
-function displayMoon() {
+
+function displayDestination() {
     destinationsNav.forEach(name => {
+        // Add a click event listener to each item
         name.addEventListener("click", (event) => {
-            if (event.target.classList.contains("border-color")) {
-                console.log("true");
-            }
+            destinationsNav.forEach(name => {
+                // Remove the 'border-color' class from all items
+                name.classList.remove("border-color")
+            })
+            // Add the 'border-color' class to the clicked item
+            let clickTarget = event.target;
+            clickTarget.classList.add("border-color");
+            //copies planetNames array
+            const planetNamesArr = [...planetNames];
+            //get an index of clickTarget;
+            const index = planetNamesArr.indexOf(clickTarget);
+            //displays data on the screen while clicking on the elements
+            distance.textContent = data.destinations[index].distances;
+            planetName.textContent = data.destinations[index].name;
+            planetImage.src = data.destinations[index].images.webp;
+            planetDescription.textContent = data.destinations[index].description;
+            travel.textContent = data.destinations[index].travel;
         })
     });
 
 }
 
-displayMoon();
+//variables from destination page
+const navCrew = document.querySelectorAll("#nav-crew div");
+const CrewName = document.querySelector("#name");
+const role = document.querySelector("#title");
+const bio = document.querySelector("#about");
+const crewImage = document.querySelector("#crew-member img");
+console.log(CrewName.textContent);
+
+
+
+
+function displayCrew() {
+    navCrew.forEach(element => {
+        // Add a click event listener to each item
+        element.addEventListener("click", (event) => {
+            navCrew.forEach(element => {
+                // Remove the 'backgorund-opacity' class from all items
+                element.classList.remove("background-opacity")
+            })
+            // Add the 'background-opacity' class to the clicked item
+            let clickTargetCrew = event.target;
+            clickTargetCrew.classList.add("background-opacity");
+
+            //copies navCrew array
+            const navCrewArr = [...navCrew];
+            //get an index of clickTarget;
+            const indexCrew = navCrewArr.indexOf(clickTargetCrew);
+            //displays data on the screen while clicking on the item
+            CrewName.textContent = data.crew[indexCrew].name;
+            role.textContent = data.crew[indexCrew].role;
+            bio.textContent = data.crew[indexCrew].bio;
+            crewImage.src = data.crew[indexCrew].images.webp;
+        })
+    });
+
+}
+
+
+function displayTech() {
+    navCrew.forEach(element => {
+        // Add a click event listener to each item
+        element.addEventListener("click", (event) => {
+            navCrew.forEach(element => {
+                // Remove the 'backgorund-opacity' class from all items
+                element.classList.remove("background-opacity")
+            })
+            // Add the 'background-opacity' class to the clicked item
+            let clickTargetCrew = event.target;
+            clickTargetCrew.classList.add("background-opacity");
+
+            //copies navCrew array
+            const navCrewArr = [...navCrew];
+            //get an index of clickTarget;
+            const indexCrew = navCrewArr.indexOf(clickTargetCrew);
+            //displays data on the screen while clicking on the item
+            CrewName.textContent = data.crew[indexCrew].name;
+            role.textContent = data.crew[indexCrew].role;
+            bio.textContent = data.crew[indexCrew].bio;
+            crewImage.src = data.crew[indexCrew].images.webp;
+        })
+    });
+
+}
+
+
 
 

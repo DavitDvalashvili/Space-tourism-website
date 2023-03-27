@@ -360,11 +360,11 @@ html body header .navbar.active {
   opacity: 17.44%;
   cursor: pointer;
 }
-.crew .flexbox .text-box #nav-crew div:nth-of-type(1) {
-  opacity: 1;
-}
 .crew .flexbox .text-box #nav-crew div:hover {
   opacity: 50.01%;
+}
+.crew .flexbox .text-box #nav-crew .background-opacity {
+  opacity: 1;
 }
 .crew .flexbox .text-box #title {
   margin: 3.2rem 0 0.8rem 0;
